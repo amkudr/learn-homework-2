@@ -15,8 +15,10 @@ def main():
 
     with open('referat.txt', 'r', encoding='utf-8') as f:
         text = f.read()
-    print(f"Длина строки: {len(text)}")
-    print(f"Количество слов: {len(text.split())}")
+    len_str = len(text)
+    amt_words = len(text.split())
+    print(f"Длина строки: {len_str}")
+    print(f"Количество слов: {amt_words}")
     text = text.replace(".", "!")
     with open("referat2.txt", 'w', encoding='utf-8') as g:
         g.write(text) 
