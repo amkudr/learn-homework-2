@@ -18,15 +18,14 @@ def main():
     {'name': 'Маша', 'age': 25, 'job': 'Scientist'}, 
     {'name': 'Вася', 'age': 8, 'job': 'Programmer'}, 
     {'name': 'Эдуард', 'age': 48, 'job': 'Big boss'},
-    {'name': 'Аркадий', 'age': 30, 'job': 'Alcoholic'}
+    {'name': 'Аркадий', 'age': 30, 'job': 'Romantic'}
     ]
 
     with open('export.csv', 'w', encoding='1251') as f:
         fields = ['name', 'age', 'job']             
         writer = csv.DictWriter(f, fields, delimiter=";")        
         writer.writeheader()
-        for user in job:
-            writer.writerow(user)          
+        writer.writerows(job)          
 
 
 
