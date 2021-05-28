@@ -21,7 +21,7 @@ def main():
     {'name': 'Аркадий', 'age': 30, 'job': 'Romantic'}
     ]
 
-    with open('export.csv', 'w', encoding='1251') as f:
+    with open('export.csv', 'w', encoding='1251', newline="") as f:        
         fields = ['name', 'age', 'job']             
         writer = csv.DictWriter(f, fields, delimiter=";")        
         writer.writeheader()
